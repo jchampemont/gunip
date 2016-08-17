@@ -53,7 +53,7 @@ import java.util.regex.PatternSyntaxException;
  * A Generic Unit Parser is flexible enough to understand several symbols for a
  * unit (second(s), sec, s) and ignore punctuation and stop words.
  * 
- * Pre-built unit parsers are available. {@link DurationParser}
+ * Pre-built unit parsers are available. {@link DurationParser}, {@link MetricDistanceParser}
  */
 public class GenericUnitParser {
     private List<Unit> units;
