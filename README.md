@@ -1,5 +1,6 @@
 # Generic UNIt Parser (GUNIP)
 [![Build status](https://travis-ci.org/jchampemont/gunip.svg?branch=master)](https://travis-ci.org/jchampemont/gunip)
+[![Coverage Status](https://coveralls.io/repos/jchampemont/gunip/badge.svg?branch=master&service=github)](https://coveralls.io/github/jchampemont/gunip?branch=master)
 
 ## Presentation
 
