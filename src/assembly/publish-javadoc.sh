@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$TRAVIS_REPO_SLUG" == "jchampemont/gunip" ] && [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
+if [ "$TRAVIS_REPO_SLUG" == "jchampemont/gunip" ] && [ "$TRAVIS_JDK_VERSION" == "oraclejdk8" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] then
 
   echo -e "Publishing javadoc...\n"
 
@@ -14,6 +14,7 @@ if [ "$TRAVIS_REPO_SLUG" == "jchampemont/gunip" ] && [ "$TRAVIS_JDK_VERSION" == 
   cd gh-pages
   git rm -rf .
   cp -Rf $HOME/javadoc-latest .
+  mv javadoc-latest javadoc-$TRAVIS_BRANCH
   git add -f .
   git commit -m "Latest javadoc on successful travis build $TRAVIS_BUILD_NUMBER auto-pushed to gh-pages"
   git push -fq origin gh-pages > /dev/null
