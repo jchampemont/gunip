@@ -39,7 +39,7 @@ Provided parsers are:
 ## Using GUNIP
 
 GUNIP is not (yet?) available on Maven central. To use GUNIP, please build it from source or download 
-the latest release jar from [here](releases).
+the latest release jar from [here](https://github.com/jchampemont/gunip/releases).
 
 To use GUNIP, just instantiate an instance of GenericUnitParser. To see an example of usage, please look at the source code of [DurationParser](src/main/java/com/jeanchampemont/gunip/DurationParser.java).
 
