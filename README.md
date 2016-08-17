@@ -1,6 +1,11 @@
 # Generic UNIt Parser (GUNIP)
 [![Build status](https://travis-ci.org/jchampemont/gunip.svg?branch=master)](https://travis-ci.org/jchampemont/gunip)
 [![Coverage Status](https://coveralls.io/repos/jchampemont/gunip/badge.svg?branch=master&service=github)](https://coveralls.io/github/jchampemont/gunip?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/jchampemont/gunip.svg?maxAge=2592000)](https://github.com/jchampemont/gunip/issues)
+[![GitHub release](https://img.shields.io/github/release/jchampemont/gunip.svg?maxAge=2592000)](https://github.com/jchampemont/gunip/releases)
+[![Jitpack .jar](https://jitpack.io/v/jchampemont/gunip.svg)](https://jitpack.io/#jchampemont/gunip)
+
+[Javadoc](https://jchampemont.github.io/gunip/javadoc-master/)
 
 ## Presentation
 
