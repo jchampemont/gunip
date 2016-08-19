@@ -52,6 +52,9 @@ the latest release jar from [here](https://github.com/jchampemont/gunip/releases
 
 To use GUNIP, just instantiate an instance of GenericUnitParser. To see an example of usage, please look at the source code of [DurationParser](src/main/java/com/jeanchampemont/gunip/DurationParser.java).
 
+#### Using Jitpack
+A version of Gunip is available using the Jitpack maven repository. Please check details here: [Gunip on Jitpack](https://jitpack.io/#jchampemont/gunip/)
+
 ## Contributing
 I am happy to accept any pull request as long as it respects the following guidelines :
 
