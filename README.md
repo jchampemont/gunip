@@ -43,6 +43,7 @@ Provided parsers are:
 
 - DurationParser, for seconds up to years (see [DurationParser](src/main/java/com/jeanchampemont/gunip/DurationParser.java))
 - MetricDistanceParser, for millimeters up to kilometers (see [MetricDistanceParser](src/main/java/com/jeanchampemont/gunip/MetricDistanceParser.java))
+- ImperialDistanceParser, for inches, feet, yard and miles (see [ImperialDistanceParser](src/main/java/com/jeanchampemont/gunip/ImperialDistanceParser.java))
 
 ## Using GUNIP
 
