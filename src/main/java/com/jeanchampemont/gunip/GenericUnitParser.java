@@ -17,6 +17,7 @@
  */
 package com.jeanchampemont.gunip;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -72,7 +73,7 @@ public class GenericUnitParser {
      *            The units table
      */
     public GenericUnitParser(List<Unit> units) {
-        this.units = units;
+        this.units = new ArrayList<Unit>(units);
     }
 
     /**
