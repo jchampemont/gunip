@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Add a builder to facilitate the construction of units table
 - Change the existing unit parsers implementations to use that builder
+
 ### Fixed
 - Defensively copying the List parameter in [GenericUnitParser](src/main/java/com/jeanchampemont/gunip/GenericUnitParser.java).
 - Unit constructor is now accepting a `double` as the value of the unit in base unit. Constructor using a `long` is now deprecated.
