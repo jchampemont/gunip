@@ -35,6 +35,27 @@ public class Unit {
 
     final double value;
 
+    /**
+     * Build a new unit with the specified unit symbols patterns and the value
+     * in the base unit.
+     * 
+     * @param symbolsPatterns
+     *            an array of unit symbols patterns matching possible unit's symbols
+     * @param valueInBaseUnit
+     *            the value of this unit in the base unit
+     */
+    public Unit(String[] symbolsPatterns, double valueInBaseUnit) {
+        this.patterns = Arrays.asList(symbolsPatterns);
+        this.value = valueInBaseUnit;
+    }
+
+    /**
+     * @param patterns
+     * @param valueInSec
+     * 
+     * @deprecated Prefer using {@link Unit(String[], double)}
+     */
+    @Deprecated
     public Unit(String[] patterns, long valueInSec) {
         this.patterns = Arrays.asList(patterns);
         this.value = valueInSec;
