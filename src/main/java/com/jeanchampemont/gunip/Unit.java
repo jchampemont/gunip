@@ -53,7 +53,7 @@ public class Unit {
      * @param patterns
      * @param valueInSec
      * 
-     * @deprecated Prefer using {@link Unit(String[], double)}
+     * @deprecated Prefer using {@link #Unit(String[], double)}
      */
     @Deprecated
     public Unit(String[] patterns, long valueInSec) {
