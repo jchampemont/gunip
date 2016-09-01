@@ -17,26 +17,19 @@
  */
 package com.jeanchampemont.gunip;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A ImperialDistanceParser is a {@link GenericUnitParser} for imperial distances, including
  * inches, feet, yards and miles
  *
  */
 public class ImperialDistanceParser extends GenericUnitParser {
-
-    private static final List<Unit> units = new ArrayList<>();
-
-    static {
-        units.add(new Unit(new String[] { "in", "inch", "inche", "\"" }, 1));
-        units.add(new Unit(new String[] { "ft", "foot", "feet", "'" }, 12));
-        units.add(new Unit(new String[] { "yd", "yard"}, 12 * 3));
-        units.add(new Unit(new String[] { "mi", "mile"}, 1760 * 12 * 3));
-    }
-
+    
     public ImperialDistanceParser() {
-        super(units);
+        super(UnitsBuilder.baseUnit(     "in", "inch", "inche", "\"")
+                .addUnit(12            , "ft", "foot", "feet", "'")
+                .addUnit(12 * 3        , "yd", "yard")
+                .addUnit(1760 * 12 * 3 , "mi", "mile")
+            .build()
+        );
     }
 }

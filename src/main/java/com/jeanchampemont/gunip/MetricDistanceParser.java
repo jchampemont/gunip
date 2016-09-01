@@ -17,9 +17,6 @@
  */
 package com.jeanchampemont.gunip;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A MetricDistanceParser is a {@link GenericUnitParser} for metric distances, from millimeters
  * to kilometers.
@@ -27,19 +24,15 @@ import java.util.List;
  */
 public class MetricDistanceParser extends GenericUnitParser {
 
-    private static final List<Unit> units = new ArrayList<>();
-
-    static {
-        units.add(new Unit(new String[] { "mm", "millimetre", "millimeter" }, 1));
-        units.add(new Unit(new String[] { "cm", "centimetre", "centimeter" }, 10));
-        units.add(new Unit(new String[] { "dm", "decimetre", "decimetre" }, 100));
-        units.add(new Unit(new String[] { "m", "metre", "meter" }, 1000));
-        units.add(new Unit(new String[] { "dam", "decametre", "decameter" }, 10000));
-        units.add(new Unit(new String[] { "hm", "hectometre", "hectometer"}, 100000));
-        units.add(new Unit(new String[] { "km", "kilometre", "kilometer" }, 1000000));
-    }
-
     public MetricDistanceParser() {
-        super(units);
+        super(UnitsBuilder.baseUnit("mm", "millimetre", "millimeter")
+                .addUnit(10,        "cm", "centimetre", "centimeter")
+                .addUnit(100,       "dm", "decimetre", "decimetre")
+                .addUnit(1000,      "m", "metre", "meter")
+                .addUnit(10000,     "dam", "decametre", "decameter")
+                .addUnit(100000,    "hm", "hectometre", "hectometer")
+                .addUnit(1000000,   "km", "kilometre", "kilometer")
+            .build()
+        );
     }
 }

@@ -17,9 +17,6 @@
  */
 package com.jeanchampemont.gunip;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A DurationParser is a {@link GenericUnitParser} for durations, from seconds
  * to years.
@@ -27,19 +24,15 @@ import java.util.List;
  */
 public class DurationParser extends GenericUnitParser {
 
-    private static final List<Unit> units = new ArrayList<>();
-
-    static {
-        units.add(new Unit(new String[] { "s", "sec", "second" }, 1));
-        units.add(new Unit(new String[] { "m(?!s)", "min", "minute" }, 60));
-        units.add(new Unit(new String[] { "h", "hr", "hour" }, 60 * 60));
-        units.add(new Unit(new String[] { "d", "dy", "day" }, 60 * 60 * 24));
-        units.add(new Unit(new String[] { "w", "wk", "week" }, 60 * 60 * 24 * 7));
-        units.add(new Unit(new String[] { "mth", "mo", "mon", "month" }, 2628000));
-        units.add(new Unit(new String[] { "y", "yr", "year" }, 31536000));
-    }
-
     public DurationParser() {
-        super(units);
+        super(UnitsBuilder.baseUnit(        "s", "sec", "second")
+                .addUnit(60               , "m(?!s)", "min", "minute")
+                .addUnit(60 * 60          , "h", "hr", "hour")
+                .addUnit(60 * 60 * 24     , "d", "dy", "day")
+                .addUnit(60 * 60 * 24 * 7 , "w", "wk", "week")
+                .addUnit(2628000          , "mth", "mo", "mon", "month")
+                .addUnit(31536000         , "y", "yr", "year")
+            .build()
+        );
     }
 }
