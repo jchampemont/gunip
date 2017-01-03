@@ -44,6 +44,8 @@ Provided parsers are:
 - DurationParser, for seconds up to years (see [DurationParser](src/main/java/com/jeanchampemont/gunip/DurationParser.java))
 - MetricDistanceParser, for millimeters up to kilometers (see [MetricDistanceParser](src/main/java/com/jeanchampemont/gunip/MetricDistanceParser.java))
 - ImperialDistanceParser, for inches, feet, yard and miles (see [ImperialDistanceParser](src/main/java/com/jeanchampemont/gunip/ImperialDistanceParser.java))
+- BinaryByteParser, for binary units of information, from byte to yobibyte (see [BinaryByteParser](src/main/java/com/jeanchampemont/gunip/BinaryByteParser.java))
+- DecimalByteParser, for decimal units of information, from byte to yottabyte (see [DecimalByteParser](src/main/java/com/jeanchampemont/gunip/DecimalByteParser.java))
 
 ## Using GUNIP
 

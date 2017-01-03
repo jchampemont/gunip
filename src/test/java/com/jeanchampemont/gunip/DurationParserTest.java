@@ -24,9 +24,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
 @RunWith(BlockJUnit4ClassRunner.class)
-public class DurationParserTest {
-
-    private GenericUnitParser sut;
+public class DurationParserTest extends AbstractGenericUnitParserTest {
 
     private static final long MINUTE = 60;
     private static final long HOUR = 60 * MINUTE;
@@ -74,11 +72,5 @@ public class DurationParserTest {
         runTestCase("2minths5dhs", 0);
         runTestCase("15 dayz", 0);
         runTestCase("", 0);
-    }
-
-    private void runTestCase(String input, double expectedTimeInS) throws GenericUnitParserException {
-        double parsedResult = 0;
-        parsedResult = sut.parse(input);
-        Assert.assertEquals(expectedTimeInS, parsedResult, 0);
     }
 }

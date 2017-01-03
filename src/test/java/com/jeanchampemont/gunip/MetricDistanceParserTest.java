@@ -24,9 +24,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 
 @RunWith(BlockJUnit4ClassRunner.class)
-public class MetricDistanceParserTest {
-
-    private GenericUnitParser sut;
+public class MetricDistanceParserTest extends AbstractGenericUnitParserTest {
 
     private static final long MILLIMETER = 1;
     private static final long CENTIMETER = 10 * MILLIMETER;
@@ -59,11 +57,5 @@ public class MetricDistanceParserTest {
         runTestCase("2minths5dhs", 0);
         runTestCase("15 kilometerzz", 0);
         runTestCase("", 0);
-    }
-
-    private void runTestCase(String input, double expectedTimeInS) throws GenericUnitParserException {
-        double parsedResult = 0;
-        parsedResult = sut.parse(input);
-        Assert.assertEquals(expectedTimeInS, parsedResult, 0);
     }
 }
